@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Jane Doe",
+    "bio": "Health enthusiast and coconut oil expert with years of experience.",
+    "avatar": "https://via.placeholder.com/100"
+  },
+  {
+    "id": 2,
+    "name": "John Smith",
+    "bio": "Beauty blogger passionate about natural skincare solutions.",
+    "avatar": "https://via.placeholder.com/100"
+  }
+]

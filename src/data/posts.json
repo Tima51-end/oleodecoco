@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Benefits of Coconut Oil for Health",
+    "summary": "Discover how coconut oil can improve your health and well-being.",
+    "content": "<p>Coconut oil is a versatile product with numerous health benefits...</p>",
+    "image": "https://oleodecoco.org/uploads/6/5/5/4/65544215/scrub-500x239_orig.jpg",
+    "reading_time": "5 min",
+    "published_date": "2025-06-01",
+    "author": "Jane Doe",
+    "avatar": "https://via.placeholder.com/100",
+    "type": "Health"
+  },
+  {
+    "id": 2,
+    "title": "Coconut Oil for Hair Care",
+    "summary": "Learn how to use coconut oil for shiny, healthy hair.",
+    "content": "<p>Using coconut oil for hair care can transform your routine...</p>",
+    "image": "https://oleodecoco.org/uploads/6/5/5/4/65544215/header-500x239_orig.jpg",
+    "reading_time": "4 min",
+    "published_date": "2025-06-10",
+    "author": "John Smith",
+    "avatar": "https://via.placeholder.com/100",
+    "type": "Beauty"
+  }
+]
