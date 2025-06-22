@@ -1,22 +1,23 @@
-import authorsData from '../data/authors.json';
-import type { IAuthor } from '../types/author';
+import authorsData from "../data/authors.json";
+import type { IAuthor } from "../types/author";
 
 const About = () => {
   const authors: IAuthor[] = authorsData;
 
   return (
-    <div>
-      <h1 className="text-4xl font-bold mb-8">About Us</h1>
-      <p className="text-lg mb-6">
-        Welcome to Coconut Oil Blog! We are passionate about sharing the amazing benefits of coconut oil for health, beauty, and natural therapy.
-      </p>
-      <h2 className="text-2xl font-bold mb-4">Our Team</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h1 className="text-4xl font-extrabold mb-8 text-gray-900">About Us</h1>
+
+      <div className="text-lg mb-12 text-gray-700 max-w-3xl mx-auto leading-relaxed space-y-8">
+        <p>
+          Welcome to Oleodecoco! We are passionate about sharing the amazing
+          benefits of coconut oil for health, beauty, and natural therapy.
+        </p>
+
         {authors.map((author) => (
-          <div key={author.id} className="bg-white p-6 rounded-lg shadow-md">
-            {author.avatar && <img src={author.avatar} alt={author.name} className="w-24 h-24 rounded-full mx-auto mb-4" />}
-            <h3 className="text-xl font-semibold">{author.name}</h3>
-            <p className="text-gray-600">{author.bio}</p>
+          <div key={author.id}>
+            <h3 className="text-xl font-bold text-gray-900">{author.name}</h3>
+            <p className="text-gray-600 text-base">{author.bio}</p>
           </div>
         ))}
       </div>
