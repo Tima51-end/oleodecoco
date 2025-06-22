@@ -1,16 +1,54 @@
+import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import PostCard from '../components/PostCard';
-import postsData from '../data/posts.json';
-
+import type { IArticle } from '../types/post';
+import { supabase } from '../utils/supabaseClient';
 
 const SinglePost = () => {
   const { id } = useParams();
-  const post = postsData.find((p) => p.id === Number(id));
-  const relatedPosts = postsData.filter((p) => p.type === post?.type && p.id !== post?.id).slice(0, 3);
+  const [post, setPost] = useState<IArticle | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<IArticle[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  if (!post) {
-    return <div>Post not found</div>;
-  }
+  useEffect(() => {
+    const fetchPostAndRelated = async () => {
+      try {
+        // Fetch single post
+        const { data: postData, error: postError } = await supabase
+          .from('ashley_articles')
+          .select('*')
+          .eq('id', Number(id))
+          .single();
+
+        if (postError) throw postError;
+        if (!postData) throw new Error('Post not found');
+
+        setPost(postData);
+
+        // Fetch related posts
+        const { data: relatedData, error: relatedError } = await supabase
+          .from('ashley_articles')
+          .select('*')
+          .eq('type', postData.type)
+          .neq('id', postData.id)
+          .limit(3);
+
+        if (relatedError) throw relatedError;
+        setRelatedPosts(relatedData || []);
+      } catch (err) {
+        setError('Failed to fetch post');
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPostAndRelated();
+  }, [id]);
+
+  if (loading) return <div>Loading...</div>;
+  if (error || !post) return <div>Post not found</div>;
 
   return (
     <div>

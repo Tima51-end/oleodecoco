@@ -1,11 +1,39 @@
-import PostCard from "../components/PostCard";
-import CategoryCard from "../components/CategoryCard";
-import type { IArticle } from "../types/post";
-import postsData from "../data/posts.json";
+import { useEffect, useState } from 'react';
+import PostCard from '../components/PostCard';
+import CategoryCard from '../components/CategoryCard';
+import type { IArticle } from '../types/post';
+import { supabase } from '../utils/supabaseClient';
 
 const Home = () => {
-  const posts: IArticle[] = postsData.slice(0, 6); // Превью 6 статей
-  const categories = ["Health", "Beauty", "Recipes", "Natural Therapy"];
+  const [posts, setPosts] = useState<IArticle[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const categories = ['Health', 'Beauty', 'Recipes', 'Natural Therapy'];
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('ashley_articles')
+          .select('*')
+          .order('published_date', { ascending: false })
+          .limit(6);
+        
+        if (error) throw error;
+        setPosts(data || []);
+      } catch (err) {
+        setError('Failed to fetch posts');
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
 
   return (
     <div>
