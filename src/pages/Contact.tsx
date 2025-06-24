@@ -42,109 +42,155 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-8 bg-white rounded-2xl shadow-lg border border-gray-200">
-      <h1 className="text-4xl font-extrabold mb-10 text-gray-900 tracking-tight">
-        Contact Us
-      </h1>
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-        <div>
-          <label
-            htmlFor="name"
-            className="block mb-2 text-lg font-semibold text-gray-700"
-          >
-            Your Name
-          </label>
-          <input
-            {...register("name")}
-            type="text"
-            id="name"
-            placeholder="Enter your name"
-            className="w-full rounded-lg border border-gray-300 p-4 text-base text-gray-900 placeholder-gray-400 shadow-sm
-                       focus:border-green-600 focus:ring-2 focus:ring-green-400 focus:outline-none transition duration-200"
-          />
-          {errors.name && (
-            <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
-          )}
+    <div
+      className="min-h-screen relative"
+      style={{
+        backgroundImage: "url(/palma.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-sm z-10" />
+
+      <div className="h-24 md:h-32 lg:h-24" />
+
+      <div className="relative z-10 max-w-3xl mx-auto p-8 bg-white bg-opacity-90 rounded-xl shadow-xl border border-gray-200">
+        <h1 className="text-4xl font-extrabold mb-4 text-gray-900 tracking-tight text-center">
+          Contact Us
+        </h1>
+
+        <p className="text-center text-gray-700 text-lg mb-6">
+          Got questions, feedback, or just want to say hi? We're always happy to hear from you. Fill out the form and we’ll get back to you shortly.
+        </p>
+
+        <div className="mb-8">
+          <div className="flex flex-col sm:flex-row justify-around text-gray-800 mb-4 gap-4 text-center">
+            <div>
+              <p className="text-sm font-semibold">Location</p>
+              <p className="text-sm">will be later</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">Email</p>
+              <p className="text-sm">will be later</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold">Phone</p>
+              <p className="text-sm">will be later</p>
+            </div>
+          </div>
+          <hr className="border-gray-300" />
         </div>
 
-        <div>
-          <label
-            htmlFor="email"
-            className="block mb-2 text-lg font-semibold text-gray-700"
-          >
-            Email
-          </label>
-          <input
-            {...register("email")}
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-            className="w-full rounded-lg border border-gray-300 p-4 text-base text-gray-900 placeholder-gray-400 shadow-sm
-                       focus:border-green-600 focus:ring-2 focus:ring-green-400 focus:outline-none transition duration-200"
-          />
-          {errors.email && (
-            <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
-          )}
-        </div>
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+          <div>
+            <label
+              htmlFor="name"
+              className="block mb-2 text-xl font-semibold text-gray-800"
+            >
+              Your Full Name
+            </label>
+            <input
+              {...register("name")}
+              type="text"
+              id="name"
+              placeholder="Enter your full name"
+              className="w-full rounded-md border border-gray-300 p-4 text-lg text-gray-900 placeholder-gray-500 shadow-sm focus:border-gray-600 focus:ring-2 focus:ring-gray-200 focus:outline-none transition duration-200"
+            />
+            {errors.name && (
+              <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+            )}
+          </div>
 
-        <div>
-          <label
-            htmlFor="subject"
-            className="block mb-2 text-lg font-semibold text-gray-700"
+          <div>
+            <label
+              htmlFor="email"
+              className="block mb-2 text-xl font-semibold text-gray-800"
+            >
+              Email Address
+            </label>
+            <input
+              {...register("email")}
+              type="email"
+              id="email"
+              placeholder="Enter your email address"
+              className="w-full rounded-md border border-gray-300 p-4 text-lg text-gray-900 placeholder-gray-500 shadow-sm focus:border-gray-600 focus:ring-2 focus:ring-gray-200 focus:outline-none transition duration-200"
+            />
+            {errors.email && (
+              <p className="mt-1 text-sm text-red-600">
+                {errors.email.message}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label
+              htmlFor="subject"
+              className="block mb-2 text-xl font-semibold text-gray-800"
+            >
+              Subject
+            </label>
+            <input
+              {...register("subject")}
+              type="text"
+              id="subject"
+              placeholder="Enter the subject"
+              className="w-full rounded-md border border-gray-300 p-4 text-lg text-gray-900 placeholder-gray-500 shadow-sm focus:border-gray-600 focus:ring-2 focus:ring-gray-200 focus:outline-none transition duration-200"
+            />
+            {errors.subject && (
+              <p className="mt-1 text-sm text-red-600">
+                {errors.subject.message}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label
+              htmlFor="message"
+              className="block mb-2 text-xl font-semibold text-gray-800"
+            >
+              Your Message
+            </label>
+            <textarea
+              {...register("message")}
+              id="message"
+              placeholder="Enter your message"
+              rows={6}
+              className="w-full rounded-md border border-gray-300 p-4 text-lg text-gray-900 placeholder-gray-500 shadow-sm resize-none focus:border-gray-600 focus:ring-2 focus:ring-gray-200 focus:outline-none transition duration-200"
+            ></textarea>
+            {errors.message && (
+              <p className="mt-1 text-sm text-red-600">
+                {errors.message.message}
+              </p>
+            )}
+          </div>
+
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full bg-gray-700 text-white font-semibold py-4 rounded-md hover:bg-gray-800 disabled:bg-gray-400 transition duration-200 text-lg"
           >
-            Subject
-          </label>
-          <input
-            {...register("subject")}
-            type="text"
-            id="subject"
-            placeholder="Enter subject"
-            className="w-full rounded-lg border border-gray-300 p-4 text-base text-gray-900 placeholder-gray-400 shadow-sm
-                       focus:border-green-600 focus:ring-2 focus:ring-green-400 focus:outline-none transition duration-200"
-          />
-          {errors.subject && (
-            <p className="mt-1 text-sm text-red-600">
-              {errors.subject.message}
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </button>
+
+          {submitSuccess && (
+            <p className="mt-4 text-center text-gray-700 font-medium text-lg">
+              Message sent successfully!
             </p>
           )}
-        </div>
+        </form>
 
-        <div>
-          <label
-            htmlFor="message"
-            className="block mb-2 text-lg font-semibold text-gray-700"
-          >
-            Message
-          </label>
-          <textarea
-            {...register("message")}
-            id="message"
-            placeholder="Enter your message"
-            rows={5}
-            className="w-full rounded-lg border border-gray-300 p-4 text-base text-gray-900 placeholder-gray-400 shadow-sm resize-none
-                       focus:border-green-600 focus:ring-2 focus:ring-green-400 focus:outline-none transition duration-200"
-          ></textarea>
-          {errors.message && (
-            <p className="mt-1 text-sm text-red-600">
-              {errors.message.message}
-            </p>
-          )}
-        </div>
-
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 disabled:bg-gray-400 transition duration-200"
-        >
-          {isSubmitting ? "Sending..." : "Send Message"}
-        </button>
-
-        {submitSuccess && (
-          <p className="mt-4 text-center text-green-600 font-medium">
-            Message sent successfully!
+        <div className="mt-10 text-center text-gray-600 text-base leading-relaxed">
+          <p>
+            We take your privacy seriously. Your message will be reviewed by our team and we’ll do our best to respond as soon as possible.
           </p>
-        )}
-      </form>
+          <p className="mt-2">
+            Our working hours are Monday to Friday, 9:00 – 18:00 CET.
+          </p>
+        </div>
+      </div>
+
+      <div className="h-24 md:h-32 lg:h-24" />
     </div>
   );
 };

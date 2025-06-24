@@ -1,5 +1,6 @@
 import { FiHeart, FiZap, FiSun, FiCoffee, FiSmile, FiBookOpen } from "react-icons/fi";
 
+
 const tips = [
   {
     icon: <FiZap className="text-green-600 w-8 h-8" />,

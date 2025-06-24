@@ -1,50 +1,117 @@
 const PrivacyPolicy = () => {
   return (
-    <div className="max-w-3xl mx-auto p-8 bg-white rounded-2xl shadow-md border border-gray-200">
-      <h1 className="text-4xl font-extrabold mb-10 text-gray-900 tracking-tight">
+    <div className="py-12 px-4 md:px-8">
+      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 md:mb-12 tracking-tight bg-gradient-to-r from-gray-700 to-gray-500 text-transparent bg-clip-text text-center">
         Privacy Policy
       </h1>
-      <div className="prose prose-green max-w-none">
-        <p className="text-sm text-gray-500 mb-6">
-          Last updated: June 21, 2025
-        </p>
 
-        <p className="leading-relaxed text-gray-700">
-          We value your privacy and are committed to protecting your personal
-          information. This Privacy Policy explains how we collect, use, and
-          safeguard your data.
-        </p>
+      <div className="space-y-12 max-w-4xl mx-auto">
+        <div className="text-sm text-gray-500 text-center mb-6">
+          Last Updated: December 23, 2024
+        </div>
 
-        <h2>Information We Collect</h2>
-        <p className="leading-relaxed text-gray-700">
-          We may collect personal information such as your name and email
-          address when you submit a contact form.
-        </p>
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 border-b-2 border-gray-300 pb-2">
+            Introduction
+          </h2>
+          <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+            Welcome to our website! This Privacy Policy outlines how we collect, use, store, and protect your personal data. We are committed to ensuring your privacy is respected and that your information is handled with care, in compliance with applicable data protection laws. Our goal is to provide a transparent and secure online experience for all visitors.
+          </p>
+        </section>
 
-        <h2>How We Use Your Information</h2>
-        <p className="leading-relaxed text-gray-700">
-          Your information is used to respond to your inquiries and improve our
-          services.
-        </p>
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 border-b-2 border-gray-300 pb-2">
+            1. Data Collection
+          </h2>
+          <ul className="list-disc list-inside space-y-4 text-gray-600 text-base md:text-lg">
+            <li>
+              We do not actively collect personally identifiable information unless you voluntarily provide it through the contact form on our "Contact" page.
+            </li>
+            <li>
+              Data you may share (e.g., name, email address) is used solely to respond to your inquiries and will not be shared with third parties, except as required by law or to fulfill your request.
+            </li>
+            <li>
+              We may collect non-personal data (e.g., IP address, browser type) anonymously to improve website functionality, but this cannot be linked to any individual.
+            </li>
+          </ul>
+        </section>
 
-        <h2>Data Security</h2>
-        <p className="leading-relaxed text-gray-700">
-          We implement reasonable measures to protect your data, but no method
-          of transmission over the Internet is 100% secure.
-        </p>
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 border-b-2 border-gray-300 pb-2">
+            2. Cookies and Tracking Technologies
+          </h2>
+          <ul className="list-disc list-inside space-y-4 text-gray-600 text-base md:text-lg">
+            <li>
+              <strong>Technical Cookies:</strong> Essential for website operation, enabling navigation and access to secure areas.
+            </li>
+            <li>
+              <strong>Analytical Cookies:</strong> Gather anonymous statistics on visitor trends to optimize our content.
+            </li>
+            <li>
+              <strong>Third-Party Cookies:</strong> Embedded content may set cookies from third-party providers. Review their privacy policies for details.
+            </li>
+            <li>
+              You can manage or disable cookies via your browser settings, though this may affect some site features.
+            </li>
+          </ul>
+        </section>
 
-        <h2>Contact Us</h2>
-        <p className="leading-relaxed text-gray-700">
-          If you have any questions about this Privacy Policy, please contact us
-          via our{" "}
-          <a
-            href="/contact"
-            className="text-green-700 font-semibold underline decoration-2 decoration-green-400 hover:decoration-green-600 transition"
-          >
-            Contact
-          </a>{" "}
-          page.
-        </p>
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 border-b-2 border-gray-300 pb-2">
+            3. Data Protection
+          </h2>
+          <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+            We implement robust technical and organizational measures to safeguard your data, including encryption, secure servers, and restricted access. While we strive for maximum security, no online transmission is 100% secure, and we are not liable for breaches beyond our control. Our team regularly updates these measures to ensure ongoing protection.
+          </p>
+        </section>
+
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 border-b-2 border-gray-300 pb-2">
+            4. User Rights
+          </h2>
+          <ul className="list-disc list-inside space-y-4 text-gray-600 text-base md:text-lg">
+            <li>Request access to your personal data we hold.</li>
+            <li>Request correction of inaccurate or incomplete data.</li>
+            <li>Request deletion of your data under certain conditions.</li>
+            <li>Object to data processing or restrict its use.</li>
+          </ul>
+          <p className="text-gray-600 leading-relaxed text-base md:text-lg mt-4">
+            To exercise these rights, contact us via the "Contact" page. We aim to respond within 30 days in accordance with legal requirements.
+          </p>
+        </section>
+
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 border-b-2 border-gray-300 pb-2">
+            5. Changes to the Privacy Policy
+          </h2>
+          <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+            We may update this Privacy Policy to reflect changes in our practices or legal requirements. Significant updates will be announced on our website, and we encourage periodic reviews. The last update date is always noted at the top.
+          </p>
+        </section>
+
+        <section className="space-y-6">
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 border-b-2 border-gray-300 pb-2">
+            6. Contact Us
+          </h2>
+          <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+            For questions, concerns, or requests about this Privacy Policy or your data, feel free to reach out. You can use the contact form on our{" "}
+            <a
+              href="/contact"
+              className="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-200 underline decoration-2 decoration-blue-300 hover:decoration-blue-500"
+            >
+              Contact
+            </a>{" "}
+            page or email us at [insert email address]. Our team is dedicated to assisting you promptly.
+          </p>
+          <div className="mt-6 p-4 bg-gray-100 rounded-lg border border-gray-200">
+            <p className="text-gray-700 text-base md:text-lg font-medium">
+              <strong>What is the Contact Page?</strong>
+            </p>
+            <p className="text-gray-600 leading-relaxed mt-2">
+              This is a dedicated section where you can send us your inquiries, feedback, or requests regarding your personal data or any other matters. Simply fill out the form, and we’ll get back to you as soon as possible!
+            </p>
+          </div>
+        </section>
       </div>
     </div>
   );

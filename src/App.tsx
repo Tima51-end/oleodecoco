@@ -1,15 +1,16 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-import AppRoutes from './routes/AppRoutes';
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import AppRoutes from "./routes/AppRoutes";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import IntroBlock from "./components/IntroBlock";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [pathname]);
 
   return null;
@@ -19,12 +20,15 @@ function App() {
   const location = useLocation();
 
   return (
-    
     <div className="flex flex-col min-h-screen bg-neutral-100 font-inter">
-
       <ScrollToTop />
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-8">
+      {location.pathname === "/" && <IntroBlock />}
+      <main
+        className={`flex-grow ${
+          location.pathname === "/contact" ? "" : "container mx-auto px-4 py-8"
+        }`}
+      >
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
