@@ -15,7 +15,10 @@ const About = () => {
             Our Story
           </h2>
           <p className="text-gray-600 leading-relaxed text-lg md:text-xl">
-            Welcome to our website! We are a dedicated platform designed for those who love to explore, learn, and enjoy themselves. Our mission is to create a space where knowledge and entertainment converge, delivering content that enriches the leisure time of every reader. Here, you’ll find a wide array of informative articles, fascinating trivia, practical guides, in-depth insights, and opinions on diverse topics—all crafted to inspire, educate, and provoke thought.
+            Welcome to Oleodecoco, a sanctuary for those who cherish natural living and mindful self-care. Founded with a deep respect for nature’s wisdom, we are dedicated to creating a platform where knowledge, wellness, and sustainability converge. Our journey began with a simple belief: that coconut oil, a gift from nature, holds the key to holistic health and beauty. From skincare rituals to nourishing recipes, we explore the endless possibilities of this versatile ingredient, delivering content that inspires, educates, and transforms.
+          </p>
+          <p className="text-gray-600 leading-relaxed text-lg md:text-xl">
+            Our team is a collective of wellness enthusiasts, writers, and researchers committed to curating authentic, high-quality content. We strive to make natural living accessible to everyone, whether you’re a seasoned eco-warrior or just beginning your journey toward a healthier lifestyle.
           </p>
         </section>
 
@@ -25,13 +28,16 @@ const About = () => {
           </h2>
           <ul className="list-disc list-inside space-y-6 text-gray-600 text-lg md:text-xl">
             <li>
-              We believe that knowledge should be accessible to everyone, regardless of age, interests, or experience level.
+              <strong>Simplicity is key:</strong> We believe that true wellness lies in returning to nature’s essentials, free from synthetic additives or complex routines.
             </li>
             <li>
-              Our team of authors and contributors works diligently every day to curate and create high-quality content.
+              <strong>Knowledge for all:</strong> Our content is crafted to be inclusive, offering insights for beginners and experts alike, ensuring everyone can benefit from natural care.
             </li>
             <li>
-              We are committed to providing reliable information, written in a clear and engaging manner, ensuring every reader discovers valuable insights tailored to their needs.
+              <strong>Sustainability matters:</strong> We advocate for eco-conscious practices, from sustainable sourcing to minimal-waste living, to protect our planet for future generations.
+            </li>
+            <li>
+              <strong>Community-driven:</strong> We foster a vibrant community of curious minds, encouraging dialogue, shared experiences, and collective growth.
             </li>
           </ul>
         </section>
@@ -42,13 +48,16 @@ const About = () => {
           </h2>
           <ul className="list-disc list-inside space-y-6 text-gray-600 text-lg md:text-xl">
             <li>
-              A broad variety of categories, including health and wellness, technology, lifestyle, and more, catering to all passions.
+              <strong>Diverse content:</strong> Explore articles spanning health, beauty, nutrition, sustainability, and mindfulness, all rooted in natural principles.
             </li>
             <li>
-              Each article is enhanced with captivating images and multimedia content for a pleasant and immersive reading experience.
+              <strong>Engaging media:</strong> Our articles are enriched with stunning visuals, videos, and infographics to make learning both informative and enjoyable.
             </li>
             <li>
-              Regularly updated content to keep you informed and engaged with the latest trends and insights.
+              <strong>Practical guides:</strong> From DIY skincare recipes to eco-friendly home tips, we provide actionable advice to integrate natural living into your daily routine.
+            </li>
+            <li>
+              <strong>Fresh updates:</strong> Our content is regularly refreshed to keep you informed about the latest trends, research, and innovations in natural wellness.
             </li>
           </ul>
         </section>
@@ -58,13 +67,16 @@ const About = () => {
             Why Join Us?
           </h2>
           <p className="text-gray-600 leading-relaxed text-lg md:text-xl">
-            Our goal is to build a community of curious and passionate readers who are always eager to learn something new. Whether you want to dive deep into a specific topic, unwind with an engaging read, or find inspiration, you’ll always discover fresh content here. We invite you to subscribe to our newsletter to receive the latest updates directly in your inbox. Follow us on social media to stay connected and interact with our vibrant community!
+            Oleodecoco is more than a website — it’s a movement toward a simpler, healthier, and more sustainable way of life. By joining our community, you’ll gain access to a wealth of knowledge, connect with like-minded individuals, and discover new ways to care for yourself and the environment. Subscribe to our newsletter for exclusive tips, recipes, and updates delivered straight to your inbox. Follow us on social media to share your journey and inspire others!
+          </p>
+          <p className="text-gray-600 leading-relaxed text-lg md:text-xl">
+            Whether you’re here to learn about coconut oil’s benefits, explore natural remedies, or find inspiration for mindful living, we’re thrilled to have you with us. Let’s embark on this journey together!
           </p>
         </section>
 
         <section className="space-y-8">
           <p className="text-gray-600 leading-relaxed text-lg md:text-xl text-center">
-            Thank you for being here, and happy reading! We look forward to accompanying you on your journey of discovery and growth.
+            Thank you for choosing Oleodecoco. Here’s to a life of balance, beauty, and nature — happy exploring!
           </p>
         </section>
       </div>

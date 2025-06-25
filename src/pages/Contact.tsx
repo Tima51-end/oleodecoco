@@ -55,13 +55,31 @@ const Contact = () => {
 
       <div className="h-24 md:h-32 lg:h-24" />
 
-      <div className="relative z-10 max-w-3xl mx-auto p-8 bg-white bg-opacity-90 rounded-xl shadow-xl border border-gray-200">
+      <div className="relative z-10 max-w-4xl mx-auto p-8 bg-white bg-opacity-90 rounded-xl shadow-xl border border-gray-200">
+        {/* Новый раздел с информацией о сообществе */}
+        <section className="mb-12 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 tracking-tight bg-gradient-to-r from-green-600 to-green-400 text-transparent bg-clip-text">
+            Join Our Natural Living Community
+          </h1>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            At Oleodecoco, we’re building a community of individuals passionate
+            about natural wellness, sustainability, and mindful living. Whether
+            you have questions, feedback, or simply want to connect, we’re here
+            to listen and support you on your journey.
+          </p>
+          <p className="text-gray-600 text-base italic">
+            Reach out, share your story, or ask about coconut oil benefits — we
+            can’t wait to hear from you!
+          </p>
+        </section>
+
         <h1 className="text-4xl font-extrabold mb-4 text-gray-900 tracking-tight text-center">
           Contact Us
         </h1>
 
         <p className="text-center text-gray-700 text-lg mb-6">
-          Got questions, feedback, or just want to say hi? We're always happy to hear from you. Fill out the form and we’ll get back to you shortly.
+          Got questions, feedback, or just want to say hi? We're always happy to
+          hear from you. Fill out the form and we’ll get back to you shortly.
         </p>
 
         <div className="mb-8">
@@ -182,7 +200,8 @@ const Contact = () => {
 
         <div className="mt-10 text-center text-gray-600 text-base leading-relaxed">
           <p>
-            We take your privacy seriously. Your message will be reviewed by our team and we’ll do our best to respond as soon as possible.
+            We take your privacy seriously. Your message will be reviewed by our
+            team and we’ll do our best to respond as soon as possible.
           </p>
           <p className="mt-2">
             Our working hours are Monday to Friday, 9:00 – 18:00 CET.

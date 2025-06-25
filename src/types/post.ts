@@ -6,7 +6,7 @@ export interface IArticle {
   image?: string;
   reading_time?: string;
   published_date?: string;
-  author?: string;
+  author: string;
   avatar?: string;
   type?: string;
   comments?: IComment[];
