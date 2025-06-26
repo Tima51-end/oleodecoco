@@ -8,14 +8,15 @@ import PrivacyPolicy from '../pages/PrivacyPolicy';
 import Contact from '../pages/Contact';
 import NotFound from '../pages/NotFound';
 
-    
+
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/blog" element={<Blog />} />
-      <Route path="/post/:id" element={<SinglePost />} />
+    <Route path="/post/:slug" element={<SinglePost />} />
+
       <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />

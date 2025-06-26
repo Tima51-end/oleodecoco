@@ -19,7 +19,7 @@ const PostCard = ({ post }: { post: IArticle }) => {
       variants={cardVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      style={{ zIndex: 1 }} // Предотвращаем наложение
+      style={{ zIndex: 1 }} 
     >
       {post.image ? (
         <img

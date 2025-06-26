@@ -15,10 +15,22 @@ const About = () => {
             Our Story
           </h2>
           <p className="text-gray-600 leading-relaxed text-lg md:text-xl">
-            Welcome to Oleodecoco, a sanctuary for those who cherish natural living and mindful self-care. Founded with a deep respect for nature’s wisdom, we are dedicated to creating a platform where knowledge, wellness, and sustainability converge. Our journey began with a simple belief: that coconut oil, a gift from nature, holds the key to holistic health and beauty. From skincare rituals to nourishing recipes, we explore the endless possibilities of this versatile ingredient, delivering content that inspires, educates, and transforms.
+            Welcome to Oleodecoco, a sanctuary for those who cherish natural
+            living and mindful self-care. Founded with a deep respect for
+            nature’s wisdom, we are dedicated to creating a platform where
+            knowledge, wellness, and sustainability converge. Our journey began
+            with a simple belief: that coconut oil, a gift from nature, holds
+            the key to holistic health and beauty. From skincare rituals to
+            nourishing recipes, we explore the endless possibilities of this
+            versatile ingredient, delivering content that inspires, educates,
+            and transforms.
           </p>
           <p className="text-gray-600 leading-relaxed text-lg md:text-xl">
-            Our team is a collective of wellness enthusiasts, writers, and researchers committed to curating authentic, high-quality content. We strive to make natural living accessible to everyone, whether you’re a seasoned eco-warrior or just beginning your journey toward a healthier lifestyle.
+            Our team is a collective of wellness enthusiasts, writers, and
+            researchers committed to curating authentic, high-quality content.
+            We strive to make natural living accessible to everyone, whether
+            you’re a seasoned eco-warrior or just beginning your journey toward
+            a healthier lifestyle.
           </p>
         </section>
 
@@ -28,16 +40,25 @@ const About = () => {
           </h2>
           <ul className="list-disc list-inside space-y-6 text-gray-600 text-lg md:text-xl">
             <li>
-              <strong>Simplicity is key:</strong> We believe that true wellness lies in returning to nature’s essentials, free from synthetic additives or complex routines.
+              <strong>Simplicity is key:</strong> We believe that true wellness
+              lies in returning to nature’s essentials, free from synthetic
+              additives or complex routines.
             </li>
             <li>
-              <strong>Knowledge for all:</strong> Our content is crafted to be inclusive, offering insights for beginners and experts alike, ensuring everyone can benefit from natural care.
+              <strong>Knowledge for all:</strong> Our content is crafted to be
+              inclusive, offering insights for beginners and experts alike,
+              ensuring everyone can benefit from natural care.
             </li>
             <li>
-              <strong>Sustainability matters:</strong> We advocate for eco-conscious practices, from sustainable sourcing to minimal-waste living, to protect our planet for future generations.
+              <strong>Sustainability matters:</strong> We advocate for
+              eco-conscious practices, from sustainable sourcing to
+              minimal-waste living, to protect our planet for future
+              generations.
             </li>
             <li>
-              <strong>Community-driven:</strong> We foster a vibrant community of curious minds, encouraging dialogue, shared experiences, and collective growth.
+              <strong>Community-driven:</strong> We foster a vibrant community
+              of curious minds, encouraging dialogue, shared experiences, and
+              collective growth.
             </li>
           </ul>
         </section>
@@ -48,18 +69,35 @@ const About = () => {
           </h2>
           <ul className="list-disc list-inside space-y-6 text-gray-600 text-lg md:text-xl">
             <li>
-              <strong>Diverse content:</strong> Explore articles spanning health, beauty, nutrition, sustainability, and mindfulness, all rooted in natural principles.
+              <strong>Diverse content:</strong> Explore articles spanning
+              health, beauty, nutrition, sustainability, and mindfulness, all
+              rooted in natural principles.
             </li>
             <li>
-              <strong>Engaging media:</strong> Our articles are enriched with stunning visuals, videos, and infographics to make learning both informative and enjoyable.
+              <strong>Engaging media:</strong> Our articles are enriched with
+              stunning visuals, videos, and infographics to make learning both
+              informative and enjoyable.
             </li>
             <li>
-              <strong>Practical guides:</strong> From DIY skincare recipes to eco-friendly home tips, we provide actionable advice to integrate natural living into your daily routine.
+              <strong>Practical guides:</strong> From DIY skincare recipes to
+              eco-friendly home tips, we provide actionable advice to integrate
+              natural living into your daily routine.
             </li>
             <li>
-              <strong>Fresh updates:</strong> Our content is regularly refreshed to keep you informed about the latest trends, research, and innovations in natural wellness.
+              <strong>Fresh updates:</strong> Our content is regularly refreshed
+              to keep you informed about the latest trends, research, and
+              innovations in natural wellness.
             </li>
           </ul>
+
+          <div className="mt-6 text-center">
+            <a
+              href="/blog"
+              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-md text-lg font-semibold hover:bg-gray-700 transition-colors duration-300"
+            >
+              Explore our Blog
+            </a>
+          </div>
         </section>
 
         <section className="space-y-8">
@@ -67,16 +105,68 @@ const About = () => {
             Why Join Us?
           </h2>
           <p className="text-gray-600 leading-relaxed text-lg md:text-xl">
-            Oleodecoco is more than a website — it’s a movement toward a simpler, healthier, and more sustainable way of life. By joining our community, you’ll gain access to a wealth of knowledge, connect with like-minded individuals, and discover new ways to care for yourself and the environment. Subscribe to our newsletter for exclusive tips, recipes, and updates delivered straight to your inbox. Follow us on social media to share your journey and inspire others!
+            Oleodecoco is more than a website — it’s a movement toward a
+            simpler, healthier, and more sustainable way of life. By joining our
+            community, you’ll gain access to a wealth of knowledge, connect with
+            like-minded individuals, and discover new ways to care for yourself
+            and the environment. Subscribe to our newsletter for exclusive tips,
+            recipes, and updates delivered straight to your inbox. Follow us on
+            social media to share your journey and inspire others!
           </p>
           <p className="text-gray-600 leading-relaxed text-lg md:text-xl">
-            Whether you’re here to learn about coconut oil’s benefits, explore natural remedies, or find inspiration for mindful living, we’re thrilled to have you with us. Let’s embark on this journey together!
+            Whether you’re here to learn about coconut oil’s benefits, explore
+            natural remedies, or find inspiration for mindful living, we’re
+            thrilled to have you with us. Let’s embark on this journey together!
           </p>
         </section>
 
         <section className="space-y-8">
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 border-b-2 border-gray-300 pb-4">
+            Meet the Team
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div className="text-center">
+              <img
+                src="/fem1.jpeg"
+                alt="Olivia Harper"
+                className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-900">
+                Olivia Harper
+              </h3>
+              <p className="text-gray-600">Co-Founder &amp; Content Director</p>
+            </div>
+
+            <div className="text-center">
+              <img
+                src="/fem2.jpeg"
+                alt="Isabella Moore"
+                className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-900">
+                Isabella Moore
+              </h3>
+              <p className="text-gray-600">Head of Wellness Research</p>
+            </div>
+
+            <div className="text-center">
+              <img
+                src="/mal1.jpeg"
+                alt="Ethan Brooks"
+                className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-900">
+                Ethan Brooks
+              </h3>
+              <p className="text-gray-600">Community &amp; Outreach Manager</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="space-y-8">
           <p className="text-gray-600 leading-relaxed text-lg md:text-xl text-center">
-            Thank you for choosing Oleodecoco. Here’s to a life of balance, beauty, and nature — happy exploring!
+            Thank you for choosing Oleodecoco. Here’s to a life of balance,
+            beauty, and nature — happy exploring!
           </p>
         </section>
       </div>

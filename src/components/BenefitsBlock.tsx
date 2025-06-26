@@ -5,8 +5,6 @@ import {
   MdSpa,
   MdLocalHospital,
   MdStar,
-  MdNaturePeople,
-  MdFavorite,
 } from "react-icons/md";
 
 const containerVariants = {
@@ -50,30 +48,6 @@ const BenefitsBlock = () => {
       description:
         "Every product undergoes rigorous quality checks to ensure purity, potency, and consistency, delivering unparalleled results.",
     },
-    {
-      icon: <MdNaturePeople size={40} className="text-green-600" />,
-      title: "Eco-Friendly",
-      description:
-        "We prioritize sustainable sourcing and eco-conscious packaging to minimize our environmental footprint and protect our planet.",
-    },
-    {
-      icon: <MdFavorite size={40} className="text-green-600" />,
-      title: "Our Philosophy",
-      description:
-        "We champion a lifestyle rooted in harmony with nature, promoting inner balance, conscious choices, and sustainable living through our products and content.",
-    },
-    {
-      icon: <MdEco size={40} className="text-green-600" />,
-      title: "Versatile Uses",
-      description:
-        "From skincare to cooking, our coconut oil adapts to your needs, offering a natural solution for beauty, health, and household applications.",
-    },
-    {
-      icon: <MdSpa size={40} className="text-green-600" />,
-      title: "Community Focus",
-      description:
-        "We support local farmers and artisans, ensuring fair trade practices and fostering communities that share our passion for natural living.",
-    },
   ];
 
   const ref = useRef(null);
@@ -93,7 +67,7 @@ const BenefitsBlock = () => {
         {benefits.map(({ icon, title, description }, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center text-center px-4 py-6 bg-white rounded-lg shadow-md"
+            className="flex flex-col items-center text-center px-4 py-6 bg-white/10 rounded-lg shadow-md"
             variants={cardVariants}
             whileHover={{ scale: 1.05 }}
           >

@@ -2,19 +2,13 @@ import { useEffect, useState, useRef } from "react";
 import PostCard from "../components/PostCard";
 import type { IArticle } from "../types/post";
 import { supabase } from "../utils/supabaseClient";
-import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
+import { slugify } from "../utils/slugify.ts";
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
 };
-
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -37,9 +31,7 @@ const Blog = () => {
           .from("ashley_articles")
           .select("*")
           .order("published_date", { ascending: false });
-
         if (error) throw error;
-        console.log("Fetched posts:", data); // Отладка
         setPosts(data || []);
         setFilteredPosts(data || []);
       } catch (err) {
@@ -49,7 +41,6 @@ const Blog = () => {
         setLoading(false);
       }
     };
-
     fetchPosts();
   }, []);
 
@@ -62,7 +53,6 @@ const Blog = () => {
             post.content.toLowerCase().includes(search.toLowerCase()))
       )
     );
-    console.log("Filtered posts:", filteredPosts); // Отладка
   }, [search, posts]);
 
   if (loading)
@@ -82,7 +72,6 @@ const Blog = () => {
         Our Blog
       </h1>
 
-      {/* Новый баннер для вовлечения */}
       <section className="mb-12 bg-gradient-to-r from-green-100 to-green-200 rounded-2xl shadow-lg p-8 text-center">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
           Discover Natural Living
@@ -92,12 +81,12 @@ const Blog = () => {
           benefits, and sustainable living. Subscribe to our newsletter for
           exclusive tips and updates!
         </p>
-        <Link
-          to="/contact"
+        <a
+          href="/contact"
           className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-200"
         >
           Join Our Community
-        </Link>
+        </a>
       </section>
 
       <div className="mb-10">
@@ -106,25 +95,7 @@ const Blog = () => {
           placeholder="Search posts by title or content..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="
-            w-full
-            max-w-[900px]
-            block
-            mx-auto
-            p-4
-            border
-            border-gray-200
-            rounded-lg
-            shadow-lg
-            bg-white/90
-            placeholder-gray-400
-            focus:outline-none
-            focus:ring-4
-            focus:ring-green-400
-            focus:border-green-600
-            transition
-            text-lg
-          "
+          className="w-full max-w-[900px] block mx-auto p-4 border border-gray-200 rounded-lg shadow-lg bg-white/90 placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-green-400 focus:border-green-600 transition text-lg"
         />
       </div>
 
@@ -138,7 +109,7 @@ const Blog = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? "visible" : "visible"} // Временный обход: всегда видимы
+          animate={isInView ? "visible" : "visible"}
         >
           {filteredPosts.map((post) => (
             <motion.div
@@ -147,9 +118,9 @@ const Blog = () => {
               className="block rounded-xl transition-transform duration-300 hover:-translate-y-1"
               style={{ zIndex: 1 }}
             >
-              <Link to={`/post/${post.id}`} className="block">
+              <a href={`/post/${slugify(post.title)}`} className="block">
                 <PostCard post={post} />
-              </Link>
+              </a>
             </motion.div>
           ))}
         </motion.div>
@@ -157,5 +128,4 @@ const Blog = () => {
     </div>
   );
 };
-
 export default Blog;

@@ -93,7 +93,7 @@ const TipsBlock = () => {
         {tips.map(({ icon, title, description }, index) => (
           <motion.div
             key={index}
-            className="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-md"
+            className="flex flex-col items-center text-center p-6 bg-white/10 rounded-lg shadow-md"
             variants={cardVariants}
             whileHover={{ scale: 1.05 }}
           >

@@ -56,7 +56,6 @@ const Contact = () => {
       <div className="h-24 md:h-32 lg:h-24" />
 
       <div className="relative z-10 max-w-4xl mx-auto p-8 bg-white bg-opacity-90 rounded-xl shadow-xl border border-gray-200">
-        {/* Новый раздел с информацией о сообществе */}
         <section className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 tracking-tight bg-gradient-to-r from-green-600 to-green-400 text-transparent bg-clip-text">
             Join Our Natural Living Community
@@ -72,6 +71,15 @@ const Contact = () => {
             can’t wait to hear from you!
           </p>
         </section>
+
+        <div className="text-center mb-6">
+          <a
+            href="/privacy"
+            className="inline-block bg-gray-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-gray-800 transition duration-200 text-lg"
+          >
+            View our Privacy Policy
+          </a>
+        </div>
 
         <h1 className="text-4xl font-extrabold mb-4 text-gray-900 tracking-tight text-center">
           Contact Us
@@ -90,11 +98,11 @@ const Contact = () => {
             </div>
             <div>
               <p className="text-sm font-semibold">Email</p>
-              <p className="text-sm">will be later</p>
+              <p className="text-sm">oleodecoco@gmail.com</p>
             </div>
             <div>
               <p className="text-sm font-semibold">Phone</p>
-              <p className="text-sm">will be later</p>
+              <p className="text-sm">+48 43 374 43 55</p>
             </div>
           </div>
           <hr className="border-gray-300" />

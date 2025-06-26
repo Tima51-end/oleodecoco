@@ -1,10 +1,11 @@
-import Header from "./components/Header";
+
 import Footer from "./components/Footer";
 import AppRoutes from "./routes/AppRoutes";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import IntroBlock from "./components/IntroBlock";
+import Header from "./components/Header";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -20,11 +21,12 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="flex flex-col min-h-screen bg-neutral-100 font-inter">
+    <div className="flex flex-col min-h-screen bg-neutral-100 font-inter" >
       <ScrollToTop />
       <Header />
       {location.pathname === "/" && <IntroBlock />}
       <main
+      
         className={`flex-grow ${
           location.pathname === "/contact" ? "" : "container mx-auto px-4 py-8"
         }`}

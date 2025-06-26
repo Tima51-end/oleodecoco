@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
 
       <div className="space-y-12 max-w-4xl mx-auto">
         <div className="text-sm text-gray-500 text-center mb-6">
-          Last Updated: December 23, 2024
+          Last Updated: December 23, 2025
         </div>
 
         <section className="space-y-6">
